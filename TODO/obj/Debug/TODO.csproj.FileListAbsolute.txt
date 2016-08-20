@@ -1,0 +1,21 @@
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\bin\Debug\TODO.exe.config
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\bin\Debug\TODO.exe
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\bin\Debug\TODO.pdb
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.csprojResolveAssemblyReference.cache
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.Form1.resources
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.Properties.Resources.resources
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.ToDoListItem.resources
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.csproj.GenerateResource.Cache
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.exe
+C:\Users\Collen\AppData\Local\Temporary Projects\TODO\obj\Debug\TODO.pdb
+E:\TODO\TODO\TODO\bin\Debug\TODO.exe.config
+E:\TODO\TODO\TODO\obj\Debug\TODO.exe
+E:\TODO\TODO\TODO\obj\Debug\TODO.pdb
+E:\TODO\TODO\TODO\bin\Debug\TODO.exe
+E:\TODO\TODO\TODO\bin\Debug\TODO.pdb
+E:\TODO\TODO\TODO\obj\Debug\TODO.csprojResolveAssemblyReference.cache
+E:\TODO\TODO\TODO\obj\Debug\TODO.Form1.resources
+E:\TODO\TODO\TODO\obj\Debug\TODO.Properties.Resources.resources
+E:\TODO\TODO\TODO\obj\Debug\TODO.ToDoListItem.resources
+E:\TODO\TODO\TODO\obj\Debug\TODO.csproj.GenerateResource.Cache
+E:\TODO\TODO\TODO\obj\Debug\TODO.frmAbout.resources
