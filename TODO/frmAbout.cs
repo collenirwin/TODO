@@ -14,12 +14,20 @@ namespace TODO {
             this.Close();
         }
 
-        private void btnOpen_Click(object sender, EventArgs e) {
+        private void launchSite(string url) {
             try {
-                Process.Start("https://icons8.com/");
+                Process.Start(url);
             } catch {
-                MessageBox.Show("Couldn't open the site for some reason. Feel free to type the link into your browser manually.", "TODO");
+                MessageBox.Show("Couldn't open the site for some reason. Feel free to type \"" + url + "\" into your browser manually.", "TODO");
             }
+        }
+
+        private void btnIcons8_Click(object sender, EventArgs e) {
+            launchSite("https://icons8.com/");
+        }
+
+        private void btnGitHub_Click(object sender, EventArgs e) {
+            launchSite("https://github.com/collenirwin/TODO");
         }
     }
 }

@@ -98,6 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.chkDone);
             this.Controls.Add(this.btnDone);
             this.Controls.Add(this.txtTask);
@@ -112,9 +113,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtNumber;
         private BoinBoxNS.BoinBox btnDone;
         public System.Windows.Forms.TextBox txtTask;
         public System.Windows.Forms.CheckBox chkDone;
+        public System.Windows.Forms.TextBox txtNumber;
     }
 }

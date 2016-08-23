@@ -4,7 +4,7 @@ using System.Windows.Forms;
 namespace TODO {
     public static class Program {
 
-        public const string VERSION = "1.0.0";
+        public const string VERSION = "1.0.1";
 
         /// <summary>
         /// The main entry point for the application.

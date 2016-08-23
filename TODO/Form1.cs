@@ -56,6 +56,7 @@ namespace TODO {
             tdli.setNumber(pnlToDoList.Controls.Count + 1);
             tdli.setTask(task);
             tdli.numberChanged += new EventHandler(tdli_numberChanged);
+            tdli.numberKeyDown += new KeyEventHandler(tdli_numberKeyDown);
             tdli.taskKeyDown   += new KeyEventHandler(tdli_taskKeyDown);
             tdli.taskDisposed  += new EventHandler(tdli_taskDisposed);
             if (done) { // done! check the task off
@@ -113,6 +114,16 @@ namespace TODO {
 
             // insert it into the correct position in the task list
             insertTDLI(tdli);
+        }
+
+        private void tdli_numberKeyDown(object sender, KeyEventArgs e) {
+            ToDoListItem tdli = sender as ToDoListItem;
+
+            if (e.KeyCode == Keys.Up && tdli.number < lstTODO.Count) { // up
+                tdli.setNumber(tdli.number + 1); // increment
+            } else if (e.KeyCode == Keys.Down && tdli.number > 1) { // down
+                tdli.setNumber(tdli.number - 1); // decrement
+            }
         }
 
         // increment: -1 for looking up, 1 for looking down
@@ -318,7 +329,7 @@ namespace TODO {
         // About
         private void tsiAbout_Click(object sender, EventArgs e) {
             frmAbout f = new frmAbout();
-            f.Show();
+            f.ShowDialog();
         }
 
         #endregion

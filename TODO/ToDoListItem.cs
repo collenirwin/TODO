@@ -8,6 +8,7 @@ namespace TODO {
         #region Public
 
         public event EventHandler numberChanged;
+        public event KeyEventHandler numberKeyDown;
         public event KeyEventHandler taskKeyDown;
         public event EventHandler taskDisposed;
 
@@ -73,6 +74,11 @@ namespace TODO {
             if (e.KeyCode == Keys.Enter) {
                 e.SuppressKeyPress = true; // no annoying DING sound
                 txtTask.Focus(); // focus task box (causes validation)
+            }
+
+            // trigger numberKeyDown event
+            if (numberKeyDown != null) {
+                numberKeyDown(this, e);
             }
         }
 
