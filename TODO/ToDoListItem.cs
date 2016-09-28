@@ -131,6 +131,8 @@ namespace TODO {
             // enable/disable the textboxes based on the checkbox
             txtNumber.Enabled = !chkDone.Checked;
             txtTask.Enabled   = !chkDone.Checked;
+
+            txtTask.Focus();
         }
 
         #endregion

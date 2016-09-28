@@ -15,6 +15,9 @@ namespace TODO {
         // path of the currently open TODO list file
         string filePath = "";
 
+        // whether or not the TODOlist has been modified
+        bool modified = false;
+
         #endregion
 
         #region Constructor & Form Events
@@ -24,10 +27,20 @@ namespace TODO {
 
             // add initial task
             addTask("your task here");
+
+            modified = false;
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Enter) {
+                e.SuppressKeyPress = true; // no annoying DING sound
+
+                addTask("");
+            }
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e) {
-            if (pnlToDoList.Controls.Count > 1) { // we have at least 2 tasks
+            if (modified) {
 
                 // prompt
                 DialogResult result = MessageBox.Show("Are you sure you want to close? Your unsaved changes will be lost.", "TODO", MessageBoxButtons.YesNo);
@@ -44,6 +57,8 @@ namespace TODO {
 
         // add a ToDoListItem to pnlToDoList with specified task string, done specifies whether or not it's checked
         private bool addTask(string task = "", bool done = false) {
+            modified = true;
+
             if (lstTODO.Count == 999) { // limit 999
                 MessageBox.Show("Sorry, you've hit the task limit!", "TODO - Error");
                 return false;
@@ -108,6 +123,7 @@ namespace TODO {
 
         private void tdli_numberChanged(object sender, EventArgs e) {
             ToDoListItem tdli = sender as ToDoListItem;
+            modified = true;
 
             // set number, don't let it go over the total amount of tasks
             tdli.setNumber((tdli.number > pnlToDoList.Controls.Count) ? pnlToDoList.Controls.Count : tdli.number);
@@ -173,6 +189,7 @@ namespace TODO {
 
         // get rid of a specified task, and handle everything that goes with it if updateUI is true
         private void disposeTask(ToDoListItem tdli, bool updateUI = true) {
+            modified = true;
 
             // get new task index (task below or last task)
             int newIndex = (lstTODO.IndexOf(tdli) == lstTODO.Count - 1) ? lstTODO.Count - 2 : lstTODO.IndexOf(tdli);
@@ -237,7 +254,7 @@ namespace TODO {
 
         // Open
         private void tsiOpen_Click(object sender, EventArgs e) {
-            if (lstTODO.Count > 1) { // open todo list
+            if (modified) { // open todo list
 
                 // prompt to remind user of consequences of opening another todo list
                 DialogResult result = MessageBox.Show("Open another TODO list? Your current unsaved changes to this one will be lost.", "TODO", MessageBoxButtons.OKCancel);
@@ -270,6 +287,7 @@ namespace TODO {
                     }
 
                     this.filePath = ofd.FileName;
+                    modified = false;
 
                     // update title bar with file path
                     this.Text = filePath + " - TODO";
@@ -299,9 +317,12 @@ namespace TODO {
                     }
                 }
 
+                modified = false;
+
                 // update title bar with file path
                 this.Text = filePath + " - TODO";
             } catch {
+                modified = true;
                 MessageBox.Show("Couldn't save your TODO list. Please make sure that TODO can access the location you wish to save to.", "TODO - Error");
             }
         }

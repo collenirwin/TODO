@@ -19,3 +19,14 @@ E:\TODO\TODO\TODO\obj\Debug\TODO.Properties.Resources.resources
 E:\TODO\TODO\TODO\obj\Debug\TODO.ToDoListItem.resources
 E:\TODO\TODO\TODO\obj\Debug\TODO.csproj.GenerateResource.Cache
 E:\TODO\TODO\TODO\obj\Debug\TODO.frmAbout.resources
+E:\School2016.2\Prog\TODO\TODO\bin\Debug\TODO.exe.config
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.exe
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.pdb
+E:\School2016.2\Prog\TODO\TODO\bin\Debug\TODO.exe
+E:\School2016.2\Prog\TODO\TODO\bin\Debug\TODO.pdb
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.csprojResolveAssemblyReference.cache
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.Form1.resources
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.frmAbout.resources
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.Properties.Resources.resources
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.ToDoListItem.resources
+E:\School2016.2\Prog\TODO\TODO\obj\Debug\TODO.csproj.GenerateResource.Cache
